@@ -24,6 +24,16 @@ static const char *colors[][3]      = {
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
+static const char *const autostart[] = {
+    "dbus-update-activation-environment", "--systemd", "--all", NULL,
+    "picom", NULL,
+	"/home/pranjal/Projects/slstatus/slstatus",NULL,
+    "feh", "--bg-fill", "/home/pranjal/Pictures/Downloaded/Mountains.jpg", NULL,
+	"clipmenud", NULL,
+    NULL, /* terminate */
+};
+
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -96,7 +106,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("maim --select | xclip -selection clipboard -t image/png") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("maim --select | xclip --clipboard --input --mime-type=image/png") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
