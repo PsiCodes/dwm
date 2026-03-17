@@ -28,7 +28,7 @@ static const char *const autostart[] = {
     "dbus-update-activation-environment", "--systemd", "--all", NULL,
     "picom", NULL,
 	"slstatus",NULL,
-    "feh", "--bg-fill", "$HOME/Pictures/Downloaded/Mountains.jpg", NULL,
+    "sh","-c","feh --bg-fill $HOME/Pictures/Downloaded/Mountains.jpg", NULL,
 	"clipmenud", NULL,
     NULL, /* terminate */
 };
