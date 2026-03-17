@@ -27,8 +27,8 @@ static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 static const char *const autostart[] = {
     "dbus-update-activation-environment", "--systemd", "--all", NULL,
     "picom", NULL,
-	"/home/pranjal/Projects/slstatus/slstatus",NULL,
-    "feh", "--bg-fill", "/home/pranjal/Pictures/Downloaded/Mountains.jpg", NULL,
+	"slstatus",NULL,
+    "feh", "--bg-fill", "$HOME/Pictures/Downloaded/Mountains.jpg", NULL,
 	"clipmenud", NULL,
     NULL, /* terminate */
 };
